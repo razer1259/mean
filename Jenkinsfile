@@ -6,5 +6,11 @@ pipeline {
         git 'https://github.com/razer1259/mean.git'
       }
     }
+    stage('List') {
+      steps {
+        sh '''echo $PWD
+ls'''
+      }
+    }
   }
 }
