@@ -12,5 +12,10 @@ pipeline {
 ls'''
       }
     }
+    stage('Docker deploy') {
+      steps {
+        sh 'docker-compose -f docker-compose-production.yml up -d'
+      }
+    }
   }
 }
