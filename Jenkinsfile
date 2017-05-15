@@ -14,7 +14,9 @@ ls'''
     }
     stage('Docker deploy') {
       steps {
-        sh 'docker-compose -f docker-compose-production.yml up -d'
+        sh '''python install pip -y && pip install docker-compose
+wait 20
+docker-compose -f docker-compose-production.yml up -d'''
       }
     }
   }
