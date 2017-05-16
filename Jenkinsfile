@@ -15,7 +15,7 @@ ls'''
     stage('Docker deploy') {
       steps {
         sh '''sudo apt-get install -y python-pip && sudo pip install docker-compose
-docker-compose -f docker-compose-production.yml up -d'''
+sudo docker-compose -f docker-compose-production.yml up -d'''
       }
     }
   }
